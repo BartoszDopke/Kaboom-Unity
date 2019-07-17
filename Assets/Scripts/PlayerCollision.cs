@@ -21,7 +21,7 @@ public class PlayerCollision : MonoBehaviour
         }
         if (coll.gameObject.name == "Player2")
         {
-            ScorePlayerTwo.points2 -= 10; //do trybu Versus
+            ScorePlayerTwo.points -= 10; //do trybu Versus
             if (!isCollide2)
             {
                 if (GameManager.collideWithBomb2 != null)

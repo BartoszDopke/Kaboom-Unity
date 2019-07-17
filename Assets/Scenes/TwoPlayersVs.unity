@@ -722,7 +722,6 @@ MonoBehaviour:
   isEnd: 0
   player: {fileID: 436389539}
   player2: {fileID: 1349766025}
-  bomber: {fileID: 1468773905}
   gameOverImage: {fileID: 941133659}
   GameOverText: {fileID: 2036187657}
   ExitText: {fileID: 354717635}
@@ -1820,7 +1819,6 @@ GameObject:
   - component: {fileID: 1692765190}
   - component: {fileID: 1692765193}
   - component: {fileID: 1692765192}
-  - component: {fileID: 1692765191}
   - component: {fileID: 1692765194}
   m_Layer: 5
   m_Name: PointsPlayerTwo
@@ -1848,24 +1846,6 @@ RectTransform:
   m_AnchoredPosition: {x: -507.5, y: -379.19}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1692765191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692765189}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0897618a81ec8c408e46c1e22b95d01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1692765192}
-  lives3: {fileID: 21300000, guid: 1f350aa782c67014a9c3dbfcfef60b74, type: 3}
-  lives2: {fileID: 21300000, guid: 8deb897043834b349b5d394dbd8c2a57, type: 3}
-  lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
-  mainSprite: {fileID: 436389548}
-  mainSprite2: {fileID: 1349766031}
 --- !u!114 &1692765192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1921,6 +1901,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1692765192}
+  mainSprite: {fileID: 1349766031}
+  lives3: {fileID: 21300000, guid: 13489ae0517b0d3469c29a69cac901e3, type: 3}
+  lives2: {fileID: 21300000, guid: 0b7b37b047583c04f8c02f6a8fcbfaa1, type: 3}
+  lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
 --- !u!1 &1846199737
 GameObject:
   m_ObjectHideFlags: 0

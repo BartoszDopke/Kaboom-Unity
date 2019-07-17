@@ -1185,7 +1185,7 @@ MonoBehaviour:
   speed: 0.5
   start_speed: 0.5
   rb: {fileID: 1468773906}
-  apple: {fileID: 6815382050556341891, guid: a160551af0f2c124fbbdc6d8899718a4, type: 3}
+  apple: {fileID: 1248066612129291970, guid: 23d78ee6568840f4caeb11458317bf46, type: 3}
   bomber: {fileID: 1468773905}
   nMin: -6.5
   nMax: 6.5
@@ -2234,6 +2234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673181561373676559, guid: 570813d40c283f94a9f01b9aaf4a77df,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8673181561373676558, guid: 570813d40c283f94a9f01b9aaf4a77df,
         type: 3}

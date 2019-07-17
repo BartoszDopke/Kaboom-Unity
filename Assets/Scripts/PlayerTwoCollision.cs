@@ -12,6 +12,7 @@ public class PlayerTwoCollision : MonoBehaviour
         if (coll.gameObject.name == "Player")
         {
             ScoreVS.points -= 10;
+            SpriteChangerVSMode.hp -= 1;
             if (!isCollide)
             {
                 if (GameManagerVSMode.collideWithBomb != null)
@@ -22,7 +23,7 @@ public class PlayerTwoCollision : MonoBehaviour
         }
         if (coll.gameObject.name == "Player2")
         {
-            ScorePlayerTwo.points2 += 10;
+            ScorePlayerTwo.points += 10;
             if (!isCollide2)
             {
                 if (GameManagerVSMode.collideWithBomb2 != null)

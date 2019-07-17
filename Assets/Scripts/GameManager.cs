@@ -51,13 +51,14 @@ public class GameManager : MonoBehaviour
             isEnd = true;
             SpriteChanger.hp = 0;
             SpriteChanger2.hp2 = 0;
-            Score.points = 0;
-            ScorePlayerTwo.points2 = 0;
+            
         }
     }
 
     void Start()
     {
+        Score.points = 0;
+        ScorePlayerTwo.points = 0;
         Time.timeScale = 1;
         player.GetComponent<PlayerMove>().enabled = true;
         player2.GetComponent<Player2Move>().enabled = true;

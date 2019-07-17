@@ -51,14 +51,14 @@ public class GameManagerVSMode : MonoBehaviour
             }
             isEnd = true;
             SpriteChangerVSMode.hp = 0;
-            SpriteChanger2VSMode.hp2 = 0;
-            ScoreVS.points = 0;
-            ScorePlayerTwo.points2 = 0;
+            SpriteChanger2VSMode.hp2 = 0;          
         }
     }
 
     void Start()
     {
+        ScoreVS.points = 0;
+        ScorePlayerTwo.points = 0;
         Time.timeScale = 1;
         player.GetComponent<PlayerMove>().enabled = true;
         player2.GetComponent<Player2Move>().enabled = true;

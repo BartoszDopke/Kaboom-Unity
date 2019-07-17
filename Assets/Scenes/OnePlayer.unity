@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c6499a185120144b8813cbd3e4079b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 39.6
+  speed: 35.01
 --- !u!222 &436389543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ MonoBehaviour:
   lives2: {fileID: 21300000, guid: 8deb897043834b349b5d394dbd8c2a57, type: 3}
   lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
   mainSprite: {fileID: 436389548}
-  mainSprite2: {fileID: 0}
+  mainSprite2: {fileID: 436389548}
 --- !u!114 &966334497
 MonoBehaviour:
   m_ObjectHideFlags: 0

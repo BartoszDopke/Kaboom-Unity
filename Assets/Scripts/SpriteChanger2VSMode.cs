@@ -28,16 +28,16 @@ public class SpriteChanger2VSMode : MonoBehaviour
     //metody od GameManager
     private void OnEnable()
     {
-        GameManagerVSMode.bombOutOfBoundsVSMode += ChangePlayer2Sprite;
-        GameManagerVSMode.bombOutOfBoundsVSMode += BomberUpdateSprite;
+        GameManagerVSMode.bombOutOfBounds2VSMode += ChangePlayer2Sprite;
+        GameManagerVSMode.bombOutOfBounds2VSMode += BomberUpdateSprite;
         GameManagerVSMode.collideWithBomb2 += PlayerCollisionUpdateSprite;
 
     }
 
     private void OnDisable()
     {
-        GameManagerVSMode.bombOutOfBoundsVSMode -= ChangePlayer2Sprite;
-        GameManagerVSMode.bombOutOfBoundsVSMode -= BomberUpdateSprite;
+        GameManagerVSMode.bombOutOfBounds2VSMode -= ChangePlayer2Sprite;
+        GameManagerVSMode.bombOutOfBounds2VSMode -= BomberUpdateSprite;
         GameManagerVSMode.collideWithBomb2 -= PlayerCollisionUpdateSprite;
     }
 

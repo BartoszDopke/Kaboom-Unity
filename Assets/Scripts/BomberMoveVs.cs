@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BomberMoveVs : MonoBehaviour
 {
-    private float speed = 0.5f;
+    public float speed = 0.5f;
     public float start_speed = 0.5f;
     public Rigidbody2D rb;
     public GameObject apple;
@@ -91,11 +91,11 @@ public class BomberMoveVs : MonoBehaviour
         else if (sceneName == "TwoPlayersVs")
         {
             SpawnDelayTwoPlayersVs();
-            Debug.Log("Wejście do TwoPlayersVs");
         }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         NextPoint = GenerateNextPoint(nMin, nMax);
-        RandomChoice = GenerateRandomChoice(cMin, cMax); 
+        RandomChoice = GenerateRandomChoice(cMin, cMax);
+        speed = 0.5f;
 
     }
 

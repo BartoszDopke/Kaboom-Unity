@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c6499a185120144b8813cbd3e4079b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 25.21
 --- !u!222 &436389543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -720,6 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnd: 0
+  player: {fileID: 436389539}
+  player2: {fileID: 1349766025}
   gameOverImage: {fileID: 941133659}
   GameOverText: {fileID: 2036187657}
   ExitText: {fileID: 354717635}
@@ -1550,7 +1552,7 @@ MonoBehaviour:
   speed: 0.5
   start_speed: 0.5
   rb: {fileID: 1468773906}
-  apple: {fileID: 6815382050556341891, guid: a160551af0f2c124fbbdc6d8899718a4, type: 3}
+  apple: {fileID: 1259312834667776143, guid: 30ba9885cefd29e4282253ea4a49bf23, type: 3}
   bomber: {fileID: 1468773905}
   nMin: -6.5
   nMax: 6.5
@@ -1579,10 +1581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1919e5196af8e2848a384db1199b55c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
   start_speed: 0.5
   rb: {fileID: 1468773906}
-  apple: {fileID: 6815382050556341891, guid: a160551af0f2c124fbbdc6d8899718a4, type: 3}
-  apple2: {fileID: 925691652574087036, guid: e85f920767885fb44b403baae3e7cab0, type: 3}
+  apple: {fileID: 1259312834667776143, guid: 30ba9885cefd29e4282253ea4a49bf23, type: 3}
+  apple2: {fileID: 7568829038317753119, guid: f380a79ae4ca3f64ca6ce47e34acadac, type: 3}
   bomber: {fileID: 1468773905}
   nMin: -8
   nMax: 8

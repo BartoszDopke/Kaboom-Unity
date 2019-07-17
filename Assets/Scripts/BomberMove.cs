@@ -69,6 +69,7 @@ public class BomberMove : MonoBehaviour
         }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         NextPoint = GenerateNextPoint(nMin, nMax);
+        speed = 0.5f;
        
     }
 

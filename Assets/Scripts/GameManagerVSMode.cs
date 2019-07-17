@@ -4,9 +4,11 @@ using UnityEngine;
 public class GameManagerVSMode : MonoBehaviour
 {
     public static System.Action bombOutOfBoundsVSMode;
-    public static System.Action collideWithBomb;
-    public static System.Action collideWithBomb2;
+    public static System.Action bombOutOfBounds2VSMode;
+    public static System.Action collideWithBomb; //dla pierwszego gracza
+    public static System.Action collideWithBomb2; //dla drugiego gracza
     public bool isEnd = false;
+    public GameObject player, player2;
     public Image gameOverImage;
     public Text GameOverText, ExitText, PlayText, MenuStartText;
     public Image PlayButton, ExitButton, MenuStartButton;
@@ -31,6 +33,15 @@ public class GameManagerVSMode : MonoBehaviour
 
     void Update()
     {
+        if(SpriteChangerVSMode.hp <= 0)
+        {
+            player.GetComponent<PlayerMove>().enabled = false;
+        }
+        if (SpriteChanger2VSMode.hp2 <= 0)
+        {
+            player2.GetComponent<Player2Move>().enabled = false;
+        }
+
         if (SpriteChangerVSMode.hp <= 0 && SpriteChanger2VSMode.hp2 <= 0)
         {
             if (!isEnd)
@@ -48,6 +59,8 @@ public class GameManagerVSMode : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        player.GetComponent<PlayerMove>().enabled = true;
+        player2.GetComponent<Player2Move>().enabled = true;
         gameOverImage.enabled = false;
         GameOverText.enabled = false;
         ExitText.enabled = false;

@@ -12,7 +12,7 @@ public class PlayerCollisionVSMode : MonoBehaviour
         if (coll.gameObject.name == "Player")
         {
             Score.points += 10;
-            ScoreVS.points += 10;
+            ScoreVS.points += 10; //dodaje punkty Playerowi1
             if (!isCollide)
             {
                 if (GameManagerVSMode.collideWithBomb != null)

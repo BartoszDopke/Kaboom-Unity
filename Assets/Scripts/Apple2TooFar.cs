@@ -9,9 +9,9 @@ public class Apple2TooFar : MonoBehaviour
         //wywołanie metod ze Sprite Changerów, gdy bomba spadnie poza kamerę
         if (transform.position.y < -5.5f)
         {
-            if (GameManagerVSMode.bombOutOfBoundsVSMode != null)
+            if (GameManagerVSMode.bombOutOfBounds2VSMode != null)
             {
-                GameManagerVSMode.bombOutOfBoundsVSMode.Invoke();              
+                GameManagerVSMode.bombOutOfBounds2VSMode.Invoke();              
             }
             Destroy(gameObject);
         }

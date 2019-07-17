@@ -27,7 +27,7 @@ public class SpriteChangerVSMode : MonoBehaviour
     //metody od GameManager
     private void OnEnable()
     {
-        GameManagerVSMode.bombOutOfBoundsVSMode += ChangePlayerSprite;
+        GameManagerVSMode.bombOutOfBoundsVSMode += ChangePlayerSprite; //jeśli ominie bombę, to się wywoł
         GameManagerVSMode.bombOutOfBoundsVSMode += BomberUpdateSprite;
         GameManagerVSMode.collideWithBomb += PlayerCollisionUpdateSprite;
     }

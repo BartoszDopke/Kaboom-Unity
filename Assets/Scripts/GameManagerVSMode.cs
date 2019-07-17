@@ -19,6 +19,7 @@ public class GameManagerVSMode : MonoBehaviour
     public void EndGame()
     {
         Time.timeScale = 0;
+        
         Debug.Log("GAME OVER!");
         gameOverUI.SetActive(true);
         gameOverImage.enabled = true;

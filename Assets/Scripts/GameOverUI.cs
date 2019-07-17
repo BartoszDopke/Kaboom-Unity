@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
-    private BomberMoveVs bm;
     //koniec gry
    public void Quit()
    {

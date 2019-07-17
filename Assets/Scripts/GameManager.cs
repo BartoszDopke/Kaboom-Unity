@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static System.Action collideWithBomb2;
     public bool isEnd = false;
     public Image gameOverImage;
+    public GameObject player, player2;
     public Text GameOverText, ExitText, PlayText, MenuStartText;
     public Image PlayButton, ExitButton, MenuStartButton;
 
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        player.GetComponent<PlayerMove>().enabled = false;
+        player2.GetComponent<Player2Move>().enabled = false;
         Time.timeScale = 0;
         Debug.Log("GAME OVER!");
         gameOverUI.SetActive(true);
@@ -33,6 +36,14 @@ public class GameManager : MonoBehaviour
     {
         if (SpriteChanger.hp <= 0)
         {
+            player.GetComponent<PlayerMove>().enabled = false;
+        }
+        if (SpriteChanger2.hp2 <= 0)
+        {
+            player2.GetComponent<Player2Move>().enabled = false;
+        }
+        if (SpriteChanger.hp <= 0)
+        {
             if (!isEnd)
             {
                 EndGame();
@@ -48,6 +59,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        player.GetComponent<PlayerMove>().enabled = true;
+        player2.GetComponent<Player2Move>().enabled = true;
         gameOverImage.enabled = false;
         GameOverText.enabled = false;
         ExitText.enabled = false;

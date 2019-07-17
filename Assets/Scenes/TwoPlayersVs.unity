@@ -722,6 +722,7 @@ MonoBehaviour:
   isEnd: 0
   player: {fileID: 436389539}
   player2: {fileID: 1349766025}
+  bomber: {fileID: 1468773905}
   gameOverImage: {fileID: 941133659}
   GameOverText: {fileID: 2036187657}
   ExitText: {fileID: 354717635}

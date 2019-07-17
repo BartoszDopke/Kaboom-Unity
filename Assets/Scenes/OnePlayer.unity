@@ -2131,5 +2131,16 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 941133656}
+    - target: {fileID: 2296996320024199067, guid: 69bc640f0064bcc4c8fcff2cb22eee83,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 436389539}
+    - target: {fileID: 2296996320024199067, guid: 69bc640f0064bcc4c8fcff2cb22eee83,
+        type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 8673181561373676557, guid: 570813d40c283f94a9f01b9aaf4a77df,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69bc640f0064bcc4c8fcff2cb22eee83, type: 3}

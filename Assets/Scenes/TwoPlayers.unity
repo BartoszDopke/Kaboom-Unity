@@ -1846,6 +1846,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012775325}
   m_CullTransparentMesh: 0
+--- !u!1 &2030506147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8673181561373676557, guid: 570813d40c283f94a9f01b9aaf4a77df,
+    type: 3}
+  m_PrefabInstance: {fileID: 8673181560034729860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2036187654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2156,16 @@ PrefabInstance:
       propertyPath: MenuStartText
       value: 
       objectReference: {fileID: 2104380350}
+    - target: {fileID: 2296996320024199067, guid: 69bc640f0064bcc4c8fcff2cb22eee83,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 436389539}
+    - target: {fileID: 2296996320024199067, guid: 69bc640f0064bcc4c8fcff2cb22eee83,
+        type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 2030506147}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69bc640f0064bcc4c8fcff2cb22eee83, type: 3}
 --- !u!1001 &8673181560034729860

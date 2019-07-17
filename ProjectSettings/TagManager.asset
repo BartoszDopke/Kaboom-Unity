@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player1
+  - Player2
+  - Bomb
+  - BombRed
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 642046195
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1976815767
+    locked: 0
+  - name: New Layer
+    uniqueID: 3272328457
+    locked: 0
+  - name: New Layer
+    uniqueID: 14369285
+    locked: 0
+  - name: New Layer
+    uniqueID: 1893424561
+    locked: 0
+  - name: New Layer
+    uniqueID: 1728616103
+    locked: 0
+  - name: New Layer
+    uniqueID: 3160837091
+    locked: 0
+  - name: Player1
+    uniqueID: 3621918605
+    locked: 0
+  - name: Player2
+    uniqueID: 3399355255
+    locked: 0

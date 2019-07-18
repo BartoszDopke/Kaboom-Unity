@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 //done
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 35f;
+    private float speed = 30f;
 
     void Update()
     {

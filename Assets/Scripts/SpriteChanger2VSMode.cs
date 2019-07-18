@@ -46,7 +46,7 @@ public class SpriteChanger2VSMode : MonoBehaviour
     {
         hp2--;
         UpdateSprite();
-        Debug.Log("hp player2 from SpriteChanger2VSMode: " + hp2);
+        //Debug.Log("hp player2 from SpriteChanger2VSMode: " + hp2);
 
     }
 

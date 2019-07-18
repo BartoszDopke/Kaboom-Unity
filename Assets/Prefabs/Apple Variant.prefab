@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &6322574691547190829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259312834667776143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bce9a516f2449d42a4ce177eab69d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6004347357381860219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f1b0f93854e3044bbdeb6f0bf130b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6322574691547190829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259312834667776143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bce9a516f2449d42a4ce177eab69d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5759228180792436236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34,7 +34,7 @@ PrefabInstance:
     - target: {fileID: 6815382050556341891, guid: a160551af0f2c124fbbdc6d8899718a4,
         type: 3}
       propertyPath: m_Name
-      value: Apple
+      value: Apple Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6815382050556341894, guid: a160551af0f2c124fbbdc6d8899718a4,
         type: 3}
@@ -90,6 +90,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626821681532474230, guid: a160551af0f2c124fbbdc6d8899718a4,
+        type: 3}
+      propertyPath: speed
+      value: 12.01
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3719347780032390728, guid: a160551af0f2c124fbbdc6d8899718a4, type: 3}

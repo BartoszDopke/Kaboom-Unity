@@ -18,18 +18,9 @@ public class GameManagerVSMode : MonoBehaviour
 
     public void EndGame()
     {
-        Time.timeScale = 0;
-        
-        Debug.Log("GAME OVER!");
         gameOverUI.SetActive(true);
-        gameOverImage.enabled = true;
-        GameOverText.enabled = true;
-        ExitText.enabled = true;
-        PlayText.enabled = true;
-        MenuStartText.enabled = true;
-        PlayButton.enabled = true;
-        ExitButton.enabled = true;
-        MenuStartButton.enabled = true;
+        Time.timeScale = 0;      
+        Debug.Log("GAME OVER!");       
     }
 
     void Update()
@@ -62,13 +53,5 @@ public class GameManagerVSMode : MonoBehaviour
         Time.timeScale = 1;
         player.GetComponent<PlayerMove>().enabled = true;
         player2.GetComponent<Player2Move>().enabled = true;
-        gameOverImage.enabled = false;
-        GameOverText.enabled = false;
-        ExitText.enabled = false;
-        PlayText.enabled = false;
-        MenuStartText.enabled = false;
-        PlayButton.enabled = false;
-        ExitButton.enabled = false;
-        MenuStartButton.enabled = false;
     }
 }

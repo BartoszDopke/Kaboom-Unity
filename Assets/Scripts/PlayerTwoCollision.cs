@@ -4,23 +4,10 @@ using UnityEngine;
 
 public class PlayerTwoCollision : MonoBehaviour
 {
-    private bool isCollide = false;
     private bool isCollide2 = false;
 
     void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.name == "Player")
-        {
-            ScoreVS.points -= 10;
-            SpriteChangerVSMode.hp -= 1;
-            if (!isCollide)
-            {
-                if (GameManagerVSMode.collideWithBomb != null)
-                    GameManagerVSMode.collideWithBomb.Invoke();
-                isCollide = true;
-            }
-            Destroy(gameObject);
-        }
+    {     
         if (coll.gameObject.name == "Player2")
         {
             ScorePlayerTwo.points += 10;

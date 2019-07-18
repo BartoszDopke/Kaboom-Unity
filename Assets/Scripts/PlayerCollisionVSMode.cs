@@ -20,18 +20,6 @@ public class PlayerCollisionVSMode : MonoBehaviour
                 isCollide = true;
             }
             Destroy(gameObject);
-        }
-        if (coll.gameObject.name == "Player2")
-        {
-            ScorePlayerTwo.points -= 10;
-            SpriteChanger2VSMode.hp2 -= 1;
-            if (!isCollide2)
-            {
-                if (GameManagerVSMode.collideWithBomb2 != null)
-                    GameManagerVSMode.collideWithBomb2.Invoke();
-                isCollide2 = true;
-            }
-            Destroy(gameObject);
-        }
+        } 
     }
 }

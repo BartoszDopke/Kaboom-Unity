@@ -41,8 +41,8 @@ public class BomberMove : MonoBehaviour
     }
     public void SpawnDelayTwoPlayers()
     {
-        speed = 0.9f;
-        InvokeRepeating("Spawn", 0.5f, 0.2f);
+        speed = 0.8f;
+        InvokeRepeating("Spawn", 0.5f, 0.3f);
     }
 
     public void Speed_Increase()

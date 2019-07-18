@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         //aktualizowanie i wyświetlanie obecnego wyniku
-        scoreText.text = "Score: \n" + points.ToString();
+        scoreText.text = "Score: " + points.ToString();
 
         //instrukcje warunkowe do zmiany sprite'ów przy straceniu/zyskaniu życia oraz każdym kolejnym 1000 punktów
         if (points!=0)

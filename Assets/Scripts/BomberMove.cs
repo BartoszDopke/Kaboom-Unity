@@ -5,20 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class BomberMove : MonoBehaviour
 {
-    public float speed = 0.5f;
-    public float start_speed = 0.5f;
+    private float speed = 0.5f;
+    private float start_speed = 0.5f;
     public Rigidbody2D rb;
     public GameObject apple;
+    public GameObject bonus, bonusdeath;
     public GameObject bomber;
     Vector3 NextPoint;
-    public float nMin = -8f;
-    public float nMax = 8f;
+    public float nMin = -8.8f;
+    public float nMax = 8.8f;
     public float yStart = 3.37f;
+    public float bMin = -8.5f;
+    public float bMax = 8.5f;
+    float RandomChoiceBonus;
 
     //tworzy nowy losowy punkt, do którego dochodzi Bomber
     Vector3 GenerateNextPoint(float min, float max)
     {
         return (new Vector3(Random.Range(min, max), 3.37f, yStart));
+    }
+    float GenerateRandomChoice(float min, float max)
+    {
+        return Random.Range(min, max);
     }
 
     //spawnuje bomby
@@ -33,16 +41,36 @@ public class BomberMove : MonoBehaviour
         }
     }
 
+    void SpawnBonus()
+    {
+        float ybonus = 2.5f;
+        if (RandomChoiceBonus < 0.4f)
+        {
+            GameObject newbonus = (GameObject)Instantiate(bonus) as GameObject;
+            newbonus.transform.position = new Vector2(RandomChoiceBonus, ybonus);
+            //Debug.Log("blue bomb position: " + newbonus.transform.position);
+        }
+        else
+        {
+            GameObject newbonusdeath = (GameObject)Instantiate(bonusdeath) as GameObject;
+            newbonusdeath.transform.position = new Vector2(RandomChoiceBonus, ybonus);
+            //Debug.Log("blue bombdeath position: " + newbonusdeath.transform.position);
+        }
+    }
+
     //metody zmieniające prędkość Bombera oraz częstotliwość zrzutu bomb w zależności od trybu gry
     public void SpawnDelayOnePlayer()
     {
         speed = 0.4f;
         InvokeRepeating("Spawn", 0.5f, 0.4f);
+        InvokeRepeating("SpawnBonus", 2f, 8f);
     }
     public void SpawnDelayTwoPlayers()
     {
         speed = 0.8f;
         InvokeRepeating("Spawn", 0.5f, 0.3f);
+        InvokeRepeating("SpawnBonus", 2f, 8f);
+
     }
 
     public void Speed_Increase()
@@ -69,15 +97,12 @@ public class BomberMove : MonoBehaviour
         }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         NextPoint = GenerateNextPoint(nMin, nMax);
-        speed = 0.5f;
-       
+        speed = 0.5f;       
     }
-
 
     void Update()
     {
-
-       if (Vector3.Distance(transform.position, NextPoint) > 0.5f) //vector3.distance zwraca mi dystans między a i b
+       if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Vector3.Distance(transform.position, NextPoint) < 13f) //vector3.distance zwraca mi dystans między a i b
        {
             transform.position = Vector3.Lerp(transform.position* Time.timeScale, NextPoint, speed / 20); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera
        }
@@ -86,8 +111,7 @@ public class BomberMove : MonoBehaviour
             NextPoint = GenerateNextPoint(nMin, nMax);
        }
        Speed_Increase();
-
+       RandomChoiceBonus = GenerateRandomChoice(bMin, bMax);
     }
-
 }
 

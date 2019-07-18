@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BomberMoveVs : MonoBehaviour
 {
-    public float speed = 0.5f;
-    public float start_speed = 0.5f;
+    private float speed = 0.5f;
+    private float start_speed = 0.5f;
     public Rigidbody2D rb;
     public GameObject apple;
     public GameObject apple2;
@@ -20,8 +20,8 @@ public class BomberMoveVs : MonoBehaviour
     public float yStart = 3.37f;
     public float bMin = -8.5f;
     public float bMax = 8.5f;
-    public float spawn = 0.4f;
-    private float newspawn = 0.4f;
+    private float spawn = 0.3f;
+    private float newspawn = 0.3f;
 
 
     //tworzy nowy losowy punkt, do którego dochodzi Bomber
@@ -70,16 +70,6 @@ public class BomberMoveVs : MonoBehaviour
     }
 
     //metody zmieniające prędkość Bombera oraz częstotliwość zrzutu bomb w zależności od trybu gry
-    public void SpawnDelayOnePlayer()
-    {
-        speed = 0.4f;
-        InvokeRepeating("Spawn", 0.5f, 0.4f);
-    }
-    public void SpawnDelayTwoPlayers()
-    {
-        speed = 0.9f;
-        InvokeRepeating("Spawn", 0.5f, 0.2f);
-    }
     public void SpawnDelayTwoPlayersVs()
     {
         speed = 0.9f;
@@ -93,7 +83,6 @@ public class BomberMoveVs : MonoBehaviour
         {
             speed = start_speed + ScoreVS.points / 100 * 0.05f;
         }
-
     }
 
     public void Spawn_Increase()
@@ -108,33 +97,16 @@ public class BomberMoveVs : MonoBehaviour
         }
     }
 
-
     //wywołuje spawn co określony czas
     void Start()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-        if (sceneName == "OnePlayer")
-        {
-            SpawnDelayOnePlayer();
-        }
-        else if (sceneName == "TwoPlayers")
-        {
-            SpawnDelayTwoPlayers();
-        }
-        else if (sceneName == "TwoPlayersVs")
-        {
-            SpawnDelayTwoPlayersVs();
-        }
+        SpawnDelayTwoPlayersVs();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         NextPoint = GenerateNextPoint(nMin, nMax);
         RandomChoice = GenerateRandomChoice(cMin, cMax);
         speed = 0.5f;
         newspawn = 0.5f;
-
     }
-
 
     void Update()
     {
@@ -151,7 +123,5 @@ public class BomberMoveVs : MonoBehaviour
         Spawn_Increase();
         RandomChoice = GenerateRandomChoice(cMin, cMax);
         RandomChoiceBonus = GenerateRandomChoice(bMin, bMax);
-
     }
-
 }

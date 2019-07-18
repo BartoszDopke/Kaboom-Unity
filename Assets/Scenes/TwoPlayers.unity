@@ -705,7 +705,7 @@ RectTransform:
   m_GameObject: {fileID: 941133656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2243168, y: 1.0090721, z: 1}
+  m_LocalScale: {x: 2.0060558, y: 1.0090721, z: 1}
   m_Children:
   - {fileID: 2036187655}
   - {fileID: 1985777705}
@@ -1181,14 +1181,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c3d5e390a6db3418de5b8edacf7992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  start_speed: 0.5
   rb: {fileID: 1468773906}
   apple: {fileID: 1248066612129291970, guid: 23d78ee6568840f4caeb11458317bf46, type: 3}
+  bonus: {fileID: 9044490503475653682, guid: 05ce3941e7a72364c87ebe78abafa4b4, type: 3}
+  bonusdeath: {fileID: 246049767451732745, guid: 828c55d499c964944a97bde38c370edf,
+    type: 3}
   bomber: {fileID: 1468773905}
   nMin: -6.5
   nMax: 6.5
   yStart: 2.84
+  bMin: -8.5
+  bMax: 8.5
 --- !u!114 &1468773911
 MonoBehaviour:
   m_ObjectHideFlags: 0

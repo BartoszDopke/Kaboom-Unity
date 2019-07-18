@@ -2,7 +2,7 @@
 
 public class BonusMove : MonoBehaviour
 {
-    public float speed = 13.5f;
+    public float speed = 12.5f;
 
     void Update()
     {

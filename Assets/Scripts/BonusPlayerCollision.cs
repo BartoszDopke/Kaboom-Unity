@@ -18,8 +18,7 @@ public class BonusPlayerCollision : MonoBehaviour
             Destroy(gameObject);
         }
         if (coll.gameObject.name == "Player2")
-        {
-            
+        {         
             if (SpriteChanger2VSMode.hp2 < 3)
             {
                 Debug.Log("kolizja bonusa z Playerem2!!!!!!!!!!!");

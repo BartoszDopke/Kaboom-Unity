@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerCollisionVSMode : MonoBehaviour
 {
     private bool isCollide = false;
-    private bool isCollide2 = false;
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -20,6 +19,10 @@ public class PlayerCollisionVSMode : MonoBehaviour
                 isCollide = true;
             }
             Destroy(gameObject);
-        } 
+        }
+        if(coll.gameObject.name == "Player2")
+        {
+            Destroy(gameObject);
+        }
     }
 }

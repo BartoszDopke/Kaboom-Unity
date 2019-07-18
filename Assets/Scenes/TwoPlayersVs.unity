@@ -1585,6 +1585,8 @@ MonoBehaviour:
   apple: {fileID: 1259312834667776143, guid: 30ba9885cefd29e4282253ea4a49bf23, type: 3}
   apple2: {fileID: 7568829038317753119, guid: f380a79ae4ca3f64ca6ce47e34acadac, type: 3}
   bonus: {fileID: 9044490503475653682, guid: 05ce3941e7a72364c87ebe78abafa4b4, type: 3}
+  bonusdeath: {fileID: 246049767451732745, guid: 828c55d499c964944a97bde38c370edf,
+    type: 3}
   bomber: {fileID: 1468773905}
   nMin: -8.8
   nMax: 8.8

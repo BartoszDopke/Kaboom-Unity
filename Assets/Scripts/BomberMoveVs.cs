@@ -8,7 +8,7 @@ public class BomberMoveVs : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject apple;
     public GameObject apple2;
-    public GameObject bonus;
+    public GameObject bonus, bonusdeath;
     public GameObject bomber;
     Vector3 NextPoint;
     float RandomChoice;
@@ -20,8 +20,8 @@ public class BomberMoveVs : MonoBehaviour
     public float yStart = 3.37f;
     public float bMin = -8.5f;
     public float bMax = 8.5f;
-    public float spawn = 0.5f;
-    private float newspawn = 0.5f;
+    public float spawn = 0.4f;
+    private float newspawn = 0.4f;
 
 
     //tworzy nowy losowy punkt, do którego dochodzi Bomber
@@ -37,34 +37,36 @@ public class BomberMoveVs : MonoBehaviour
 
     //spawnuje bomby
     void Spawn()
-    { 
-        
-        GameObject newapple2 = (GameObject)Instantiate(apple2) as GameObject;
-        GameObject newapple = (GameObject)Instantiate(apple) as GameObject;
-        if (newapple != null || newapple2!= null)
-        {
-            float x = bomber.transform.position.x;
-            float y = bomber.transform.position.y - 1.0f;
+    {    
+        float x = bomber.transform.position.x;
+        float y = bomber.transform.position.y - 1.0f;
             if(RandomChoice < 0.4f)
+            {
+                GameObject newapple = (GameObject)Instantiate(apple) as GameObject;
                 newapple.transform.position = new Vector2(x, y);
+            }
             else
             {
+                GameObject newapple2 = (GameObject)Instantiate(apple2) as GameObject;
                 newapple2.transform.position = new Vector2(x, y);
-            }
-           
-        }
+            }       
     }
 
     void SpawnBonus()
-    {
-        GameObject newbonus = (GameObject)Instantiate(bonus) as GameObject;
-        if(newbonus!=null)
-        { 
-            float y = 2.5f;
-           //Debug.Log("RandomChoiceBonus: " + RandomChoiceBonus);
-            newbonus.transform.position = new Vector2(RandomChoiceBonus, y); //do poprawki
-            //Debug.Log("blue bomb position: " + newbonus.transform.position);
-        }
+    {      
+        float ybonus = 2.5f;
+            if (RandomChoiceBonus < 0.4f)
+            {
+                GameObject newbonus = (GameObject)Instantiate(bonus) as GameObject;
+                newbonus.transform.position = new Vector2(RandomChoiceBonus, ybonus);
+                //Debug.Log("blue bomb position: " + newbonus.transform.position);
+            }
+            else
+            {
+                GameObject newbonusdeath = (GameObject)Instantiate(bonusdeath) as GameObject;
+                newbonusdeath.transform.position = new Vector2(RandomChoiceBonus, ybonus); 
+                //Debug.Log("blue bombdeath position: " + newbonusdeath.transform.position);
+            }       
     }
 
     //metody zmieniające prędkość Bombera oraz częstotliwość zrzutu bomb w zależności od trybu gry
@@ -82,7 +84,7 @@ public class BomberMoveVs : MonoBehaviour
     {
         speed = 0.9f;
         InvokeRepeating("Spawn", 0.5f, newspawn);
-        InvokeRepeating("SpawnBonus", 2f, 5f);
+        InvokeRepeating("SpawnBonus", 2f, 7f);
     }
     //ta funkcja działa bez zarzutu
     public void Speed_Increase()
@@ -90,7 +92,6 @@ public class BomberMoveVs : MonoBehaviour
         if (ScoreVS.points % 100 == 0)
         {
             speed = start_speed + ScoreVS.points / 100 * 0.05f;
-            //Debug.Log("speed: " + speed);
         }
 
     }
@@ -145,14 +146,11 @@ public class BomberMoveVs : MonoBehaviour
         else
         {
             NextPoint = GenerateNextPoint(nMin, nMax);
-            
-
         }
         Speed_Increase();
         Spawn_Increase();
         RandomChoice = GenerateRandomChoice(cMin, cMax);
         RandomChoiceBonus = GenerateRandomChoice(bMin, bMax);
-        //Debug.Log("Spawn in Update: " + newspawn);
 
     }
 

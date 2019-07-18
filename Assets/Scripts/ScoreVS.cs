@@ -6,10 +6,6 @@ public class ScoreVS : MonoBehaviour
     public Text scoreText;
     public static int points = 0;
     private bool isReached = false;
-    public Sprite lives3;
-    public Sprite lives2;
-    public Sprite lives1;
-    public SpriteRenderer mainSprite;
 
     void Update()
     {
@@ -22,20 +18,7 @@ public class ScoreVS : MonoBehaviour
             {
                 if(!isReached)
                 {
-                    if (SpriteChangerVSMode.hp == 1)
-                    {
-                        SpriteChangerVSMode.hp += 1;                     
-                        mainSprite.sprite = lives2;                       
-                    }
-                    else if (SpriteChangerVSMode.hp == 2)
-                    {
-                        SpriteChangerVSMode.hp += 1;
-                        mainSprite.sprite = lives3;                        
-                    }
-                    else if (SpriteChangerVSMode.hp == 3)
-                    {
-                        mainSprite.sprite = lives3;
-                    }
+                    SpriteChangerVSMode.hp++;
                     isReached = true;
                 }
             }

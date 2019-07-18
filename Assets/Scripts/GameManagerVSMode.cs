@@ -19,6 +19,7 @@ public class GameManagerVSMode : MonoBehaviour
     public void EndGame()
     {
         gameOverUI.SetActive(true);
+
         Time.timeScale = 0;      
         Debug.Log("GAME OVER!");       
     }
@@ -28,10 +29,12 @@ public class GameManagerVSMode : MonoBehaviour
         if(SpriteChangerVSMode.hp <= 0)
         {
             player.GetComponent<PlayerMove>().enabled = false;
+            player.GetComponent<Collider2D>().enabled = false;
         }
         if (SpriteChanger2VSMode.hp2 <= 0)
         {
             player2.GetComponent<Player2Move>().enabled = false;
+            player2.GetComponent<Collider2D>().enabled = false;
         }
 
         if (SpriteChangerVSMode.hp <= 0 && SpriteChanger2VSMode.hp2 <= 0)
@@ -51,7 +54,5 @@ public class GameManagerVSMode : MonoBehaviour
         ScoreVS.points = 0;
         ScorePlayerTwo.points = 0;
         Time.timeScale = 1;
-        player.GetComponent<PlayerMove>().enabled = true;
-        player2.GetComponent<Player2Move>().enabled = true;
     }
 }

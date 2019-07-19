@@ -3,7 +3,7 @@
 public class Player2Move : MonoBehaviour
 {
     //zmienne
-    public float speed = 3f;
+    public float speed;
     private Rigidbody2D rb;
     private Vector3 mousePosition;
     private Vector3 oldPosition;

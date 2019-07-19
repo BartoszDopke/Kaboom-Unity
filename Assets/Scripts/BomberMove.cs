@@ -1,28 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BomberMove : MonoBehaviour
 {
-    private float speed = 0.5f;
-    private float start_speed = 0.5f;
+    public float speed;
+    public float start_speed;
     public Rigidbody2D rb;
     public GameObject apple;
     public GameObject bonus, bonusdeath;
     public GameObject bomber;
     Vector3 NextPoint;
-    public float nMin = -8.8f;
-    public float nMax = 8.8f;
-    public float yStart = 3.37f;
+    public float nMin;
+    public float nMax;
     public float bMin = -8.5f;
     public float bMax = 8.5f;
     float RandomChoiceBonus;
+    float defaultWidth;
 
     //tworzy nowy losowy punkt, do którego dochodzi Bomber
     Vector3 GenerateNextPoint(float min, float max)
     {
-        return (new Vector3(Random.Range(min, max), 3.37f, yStart));
+        return (new Vector3(Random.Range(min, max), transform.position.y,0));
     }
     float GenerateRandomChoice(float min, float max)
     {
@@ -48,29 +46,24 @@ public class BomberMove : MonoBehaviour
         {
             GameObject newbonus = (GameObject)Instantiate(bonus) as GameObject;
             newbonus.transform.position = new Vector2(RandomChoiceBonus, ybonus);
-            //Debug.Log("blue bomb position: " + newbonus.transform.position);
         }
         else
         {
             GameObject newbonusdeath = (GameObject)Instantiate(bonusdeath) as GameObject;
             newbonusdeath.transform.position = new Vector2(RandomChoiceBonus, ybonus);
-            //Debug.Log("blue bombdeath position: " + newbonusdeath.transform.position);
         }
     }
 
     //metody zmieniające prędkość Bombera oraz częstotliwość zrzutu bomb w zależności od trybu gry
     public void SpawnDelayOnePlayer()
     {
-        speed = 0.4f;
-        InvokeRepeating("Spawn", 0.5f, 0.4f);
+        InvokeRepeating("Spawn", 0.5f, 0.5f);
         InvokeRepeating("SpawnBonus", 2f, 8f);
     }
     public void SpawnDelayTwoPlayers()
     {
-        speed = 0.8f;
-        InvokeRepeating("Spawn", 0.5f, 0.3f);
+        InvokeRepeating("Spawn", 0.5f, 0.4f);
         InvokeRepeating("SpawnBonus", 2f, 8f);
-
     }
 
     public void Speed_Increase()
@@ -78,8 +71,7 @@ public class BomberMove : MonoBehaviour
         if(Score.points % 100 == 0)
         {  
            speed = start_speed + Score.points/100 * 0.1f;
-        }
-        
+        }   
     }
     //wywołuje spawn co określony czas
     void Start()
@@ -96,16 +88,24 @@ public class BomberMove : MonoBehaviour
             SpawnDelayTwoPlayers();
         }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+        defaultWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        nMin = 0 - defaultWidth;
+        nMax = 0 + defaultWidth;
         NextPoint = GenerateNextPoint(nMin, nMax);
-        speed = 0.5f;       
     }
 
     void Update()
     {
-       if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Vector3.Distance(transform.position, NextPoint) < 13f) //vector3.distance zwraca mi dystans między a i b
+        //if(maintainWidth)
+        //{
+        //    Camera.main.orthographicSize = defaultWidth / Camera.main.aspect;
+        //}
+
+       if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Time.timeScale != 0) //vector3.distance zwraca mi dystans między a i b
        {
-            transform.position = Vector3.Lerp(transform.position* Time.timeScale, NextPoint, speed / 20); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera
-       }
+            transform.position = Vector3.Lerp(transform.position, NextPoint, 0.02f * speed); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera
+        }
        else
        {
             NextPoint = GenerateNextPoint(nMin, nMax);

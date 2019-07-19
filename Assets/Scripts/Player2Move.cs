@@ -12,6 +12,8 @@ public class Player2Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -20,8 +22,8 @@ public class Player2Move : MonoBehaviour
         {
             
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);          
-            transform.position = new Vector3(transform.position.x, -5.2f, 0); 
-            mousePosition = new Vector3(mousePosition.x, -5.2f, 0);
+            transform.position = new Vector3(transform.position.x, -5.0f, 0); 
+            mousePosition = new Vector3(mousePosition.x, -5.0f, 0);
             transform.position = Vector3.Lerp(transform.position, mousePosition, speed / 15);
             
         }

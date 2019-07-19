@@ -14,11 +14,15 @@ public class ScoreVS : MonoBehaviour
         //instrukcje warunkowe do zmiany sprite'ów przy straceniu/zyskaniu życia oraz każdym kolejnym 1000 punktów
         if (points!=0)
         {
-            if (points % 100 == 0)
+            if (points % 200 == 0)
             {
                 if(!isReached)
                 {
                     SpriteChangerVSMode.hp++;
+                    if (SpriteChangerVSMode.hp >= 3)
+                    {
+                        SpriteChangerVSMode.hp = 3;
+                    }
                     isReached = true;
                 }
             }

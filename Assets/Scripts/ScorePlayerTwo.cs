@@ -14,11 +14,15 @@ public class ScorePlayerTwo : MonoBehaviour
 
         if (points != 0)
         {
-            if (points % 100 == 0)
+            if (points % 200 == 0)
             {
                 if (!isReached)
                 {
                     SpriteChanger2VSMode.hp2++;
+                    if (SpriteChanger2VSMode.hp2 >= 3)
+                    {
+                        SpriteChanger2VSMode.hp2 = 3;
+                    }
                     isReached = true;
                 }
             }

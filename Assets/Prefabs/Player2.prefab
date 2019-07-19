@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -895612041
   m_SortingLayer: 8
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1f350aa782c67014a9c3dbfcfef60b74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a24bbaa539d06b84f98fec10c17ccbe3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673181561373676557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2b2aef827a258479ec7883a86e4a53, type: 3}
   m_Name: 
@@ -170,12 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75020df7548cb7e4c833159f6361be0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives3: {fileID: 21300000, guid: 13489ae0517b0d3469c29a69cac901e3, type: 3}
-  lives2: {fileID: 21300000, guid: 0b7b37b047583c04f8c02f6a8fcbfaa1, type: 3}
-  lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
-  coll1: {fileID: 21300000, guid: 6f874ef86d23b0345a733b31b4e850ec, type: 3}
-  coll2: {fileID: 21300000, guid: b0dbc01dd8bf09b4bbdd305fbb517ac4, type: 3}
-  coll3: {fileID: 21300000, guid: 27330d88ae91fb44c8c682156d4fb01e, type: 3}
+  lives3: {fileID: 21300000, guid: a24bbaa539d06b84f98fec10c17ccbe3, type: 3}
+  lives2: {fileID: 21300000, guid: 99459ab20698ea34da76df13d5f9346f, type: 3}
+  lives1: {fileID: 21300000, guid: 9d439fe7632a8cc4891ac5da97eaaafe, type: 3}
+  coll1: {fileID: 21300000, guid: 5df1acb4b1897b649ab7542ed0751ee5, type: 3}
+  coll2: {fileID: 21300000, guid: 2b41db7ab89a8e6448cafa73782ffbc4, type: 3}
+  coll3: {fileID: 21300000, guid: eac5c351e457c5944b8b2be6dee63391, type: 3}
   bomber: {fileID: 21300000, guid: 7c2bb0235d0dc89478cdb725bee343e0, type: 3}
   bomberhappy: {fileID: 21300000, guid: 03aaab59b5b5375478721aee5f2a2973, type: 3}
   mainSprite: {fileID: 8673181561373676555}

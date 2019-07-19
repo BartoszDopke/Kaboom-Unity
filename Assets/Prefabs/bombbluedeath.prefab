@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4802993640942065524}
   - component: {fileID: -3099694481654583521}
   - component: {fileID: -335857866007541812}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bombbluedeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a827127b327c04780de0fde569aff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12.5
+  speed: 10
 --- !u!114 &-335857866007541812
 MonoBehaviour:
   m_ObjectHideFlags: 0

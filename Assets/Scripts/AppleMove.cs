@@ -4,7 +4,7 @@
 //done
 public class AppleMove : MonoBehaviour
 {
-    public float speed = 9.5f;
+    private float speed = 6.5f;
 
     void Update()
     {

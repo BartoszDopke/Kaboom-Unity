@@ -144,14 +144,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c3d5e390a6db3418de5b8edacf7992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  start_speed: 0.5
+  speed: 0.6
   rb: {fileID: 5303161631460804588}
   apple: {fileID: 6815382050556341891, guid: a160551af0f2c124fbbdc6d8899718a4, type: 3}
+  bonus: {fileID: 9044490503475653682, guid: 05ce3941e7a72364c87ebe78abafa4b4, type: 3}
+  bonusdeath: {fileID: 246049767451732745, guid: 828c55d499c964944a97bde38c370edf,
+    type: 3}
   bomber: {fileID: 5303161631460804591}
   nMin: -8
   nMax: 8
   yStart: 2.84
+  bMin: -8.5
+  bMax: 8.5
 --- !u!114 &5303161631460804585
 MonoBehaviour:
   m_ObjectHideFlags: 0

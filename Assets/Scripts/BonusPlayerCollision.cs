@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BonusPlayerCollision : MonoBehaviour
 {
@@ -10,10 +8,7 @@ public class BonusPlayerCollision : MonoBehaviour
         {           
             if (SpriteChangerVSMode.hp < 3)
             {
-                Debug.Log("kolizja bonusa z Playerem");
                 SpriteChangerVSMode.hp++;
-                Debug.Log("hp: " + SpriteChangerVSMode.hp);
-
             }
             Destroy(gameObject);
         }
@@ -21,9 +16,7 @@ public class BonusPlayerCollision : MonoBehaviour
         {         
             if (SpriteChanger2VSMode.hp2 < 3)
             {
-                Debug.Log("kolizja bonusa z Playerem2!!!!!!!!!!!");
                 SpriteChanger2VSMode.hp2++;
-                Debug.Log("hp2: " + SpriteChanger2VSMode.hp2);
             }
             Destroy(gameObject);
         }

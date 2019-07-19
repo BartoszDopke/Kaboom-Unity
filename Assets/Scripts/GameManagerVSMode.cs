@@ -9,19 +9,27 @@ public class GameManagerVSMode : MonoBehaviour
     public static System.Action collideWithBomb2; //dla drugiego gracza
     public bool isEnd = false;
     public GameObject player, player2;
-    public Image gameOverImage;
-    public Text GameOverText, ExitText, PlayText, MenuStartText;
-    public Image PlayButton, ExitButton, MenuStartButton;
 
     [SerializeField]
     private GameObject gameOverUI;
+    public GameObject Player1Win, Player2Win, Draw;
 
     public void EndGame()
     {
         gameOverUI.SetActive(true);
-
-        Time.timeScale = 0;      
-        Debug.Log("GAME OVER!");       
+        if(ScoreVS.points > ScorePlayerTwo.points)
+        {
+            Player1Win.SetActive(true);
+        }
+        else if(ScoreVS.points < ScorePlayerTwo.points)
+        {
+            Player2Win.SetActive(true);
+        }
+        else
+        {
+            Draw.SetActive(true);
+        }
+        Time.timeScale = 0;          
     }
 
     void Update()

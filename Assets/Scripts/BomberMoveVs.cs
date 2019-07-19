@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BomberMoveVs : MonoBehaviour
 {
-    private float speed = 0.5f;
-    private float start_speed = 0.5f;
+    public float speed;
+    public float start_speed;
     public Rigidbody2D rb;
     public GameObject apple;
     public GameObject apple2;
@@ -13,15 +13,16 @@ public class BomberMoveVs : MonoBehaviour
     Vector3 NextPoint;
     float RandomChoice;
     float RandomChoiceBonus;
-    public float nMin = -8.8f;
-    public float nMax = 8.8f;
     public float cMin = 0f;
     public float cMax = 1f;
     public float yStart = 3.37f;
     public float bMin = -8.5f;
     public float bMax = 8.5f;
+    public float nMin;
+    public float nMax;
     private float spawn = 0.3f;
     private float newspawn = 0.3f;
+    float defaultWidth;
 
 
     //tworzy nowy losowy punkt, do którego dochodzi Bomber
@@ -40,7 +41,7 @@ public class BomberMoveVs : MonoBehaviour
     {    
         float x = bomber.transform.position.x;
         float y = bomber.transform.position.y - 1.0f;
-            if(RandomChoice < 0.4f)
+            if(RandomChoice < 0.5f)
             {
                 GameObject newapple = (GameObject)Instantiate(apple) as GameObject;
                 newapple.transform.position = new Vector2(x, y);
@@ -59,13 +60,11 @@ public class BomberMoveVs : MonoBehaviour
             {
                 GameObject newbonus = (GameObject)Instantiate(bonus) as GameObject;
                 newbonus.transform.position = new Vector2(RandomChoiceBonus, ybonus);
-                //Debug.Log("blue bomb position: " + newbonus.transform.position);
             }
             else
             {
                 GameObject newbonusdeath = (GameObject)Instantiate(bonusdeath) as GameObject;
                 newbonusdeath.transform.position = new Vector2(RandomChoiceBonus, ybonus); 
-                //Debug.Log("blue bombdeath position: " + newbonusdeath.transform.position);
             }       
     }
 
@@ -102,18 +101,19 @@ public class BomberMoveVs : MonoBehaviour
     {
         SpawnDelayTwoPlayersVs();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+        RandomChoice = GenerateRandomChoice(cMin, cMax); 
+        defaultWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        nMin = 0 - defaultWidth;
+        nMax = 0 + defaultWidth;
         NextPoint = GenerateNextPoint(nMin, nMax);
-        RandomChoice = GenerateRandomChoice(cMin, cMax);
-        speed = 0.5f;
-        newspawn = 0.5f;
     }
 
     void Update()
     {
-
-        if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Vector3.Distance(transform.position, NextPoint) < 11f) //vector3.distance zwraca mi dystans między a i b
+        if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Time.timeScale != 0) //vector3.distance zwraca mi dystans między a i b
         {
-            transform.position = Vector3.Lerp(transform.position*Time.timeScale, NextPoint, speed / 20); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera
+            transform.position = Vector3.Lerp(transform.position, NextPoint, 0.02f * speed); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera
         }
         else
         {

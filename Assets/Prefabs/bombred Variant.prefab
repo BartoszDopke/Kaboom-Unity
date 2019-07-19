@@ -24,11 +24,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bombred Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -4786616303088257574, guid: e85f920767885fb44b403baae3e7cab0,
-        type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 925691652574087039, guid: e85f920767885fb44b403baae3e7cab0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -83,6 +78,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4786616303088257574, guid: e85f920767885fb44b403baae3e7cab0,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4085046227753941094, guid: e85f920767885fb44b403baae3e7cab0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.28159094
+      objectReference: {fileID: 0}
+    - target: {fileID: -4085046227753941094, guid: e85f920767885fb44b403baae3e7cab0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.436818
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4614323473734035399, guid: e85f920767885fb44b403baae3e7cab0, type: 3}

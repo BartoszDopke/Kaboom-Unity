@@ -41,4 +41,20 @@ public class StartGameUI : MonoBehaviour
         SpriteChangerVSMode.hp = 3;
         SpriteChanger2VSMode.hp2 = 3;
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene(5);
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }

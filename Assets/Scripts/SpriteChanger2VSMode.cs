@@ -46,8 +46,6 @@ public class SpriteChanger2VSMode : MonoBehaviour
     {
         hp2--;
         UpdateSprite();
-        //Debug.Log("hp player2 from SpriteChanger2VSMode: " + hp2);
-
     }
 
 
@@ -82,7 +80,7 @@ public class SpriteChanger2VSMode : MonoBehaviour
     IEnumerator ChangeBombSprite()
     {
         BomberSprite.sprite = bomberhappy;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         BomberSprite.sprite = bomber;
     }
 
@@ -104,19 +102,19 @@ public class SpriteChanger2VSMode : MonoBehaviour
         if (hp2 == 3)
         {
             Collision2Sprite.sprite = coll3;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             Collision2Sprite.sprite = lives3;
         }
         else if (hp2 == 2)
         {
             Collision2Sprite.sprite = coll2;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             Collision2Sprite.sprite = lives2;
         }
         else if (hp2 == 1)
         {
             Collision2Sprite.sprite = coll1;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             Collision2Sprite.sprite = lives1;
         }
     }

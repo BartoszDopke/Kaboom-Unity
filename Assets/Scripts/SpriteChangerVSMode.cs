@@ -96,19 +96,19 @@ public class SpriteChangerVSMode : MonoBehaviour
         if (hp == 3)
         {
             CollisionSprite.sprite = coll3;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             CollisionSprite.sprite = lives3;
         }
         else if (hp == 2)
         {
             CollisionSprite.sprite = coll2;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             CollisionSprite.sprite = lives2;
         }
         else if (hp == 1)
         {
             CollisionSprite.sprite = coll1;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             CollisionSprite.sprite = lives1;
         }
     }

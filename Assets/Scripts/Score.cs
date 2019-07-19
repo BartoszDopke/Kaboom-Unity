@@ -9,6 +9,9 @@ public class Score : MonoBehaviour
     public Sprite lives3;
     public Sprite lives2;
     public Sprite lives1;
+    public Sprite lives3_2;
+    public Sprite lives2_2;
+    public Sprite lives1_2;
     public SpriteRenderer mainSprite;
     public SpriteRenderer mainSprite2;
 
@@ -42,16 +45,16 @@ public class Score : MonoBehaviour
                     if(SpriteChanger2.hp2 == 1)
                     {
                         SpriteChanger2.hp2 += 1;
-                        mainSprite2.sprite = lives2;
+                        mainSprite2.sprite = lives2_2;
                     }
                     else if (SpriteChanger2.hp2 == 2)
                     {              
                         SpriteChanger2.hp2 += 1;
-                        mainSprite2.sprite = lives3;
+                        mainSprite2.sprite = lives3_2;
                     }
                     else if (SpriteChanger2.hp2 == 3)
                     { 
-                        mainSprite2.sprite = lives3;
+                        mainSprite2.sprite = lives3_2;
                     }
                     isReached = true;
                 }

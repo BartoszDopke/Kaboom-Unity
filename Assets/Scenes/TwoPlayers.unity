@@ -303,6 +303,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &272964891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8673181561373676557, guid: 570813d40c283f94a9f01b9aaf4a77df,
+    type: 3}
+  m_PrefabInstance: {fileID: 8673181560034729860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302483081
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +860,9 @@ MonoBehaviour:
   lives3: {fileID: 21300000, guid: 1f350aa782c67014a9c3dbfcfef60b74, type: 3}
   lives2: {fileID: 21300000, guid: 8deb897043834b349b5d394dbd8c2a57, type: 3}
   lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
+  lives3_2: {fileID: 21300000, guid: a24bbaa539d06b84f98fec10c17ccbe3, type: 3}
+  lives2_2: {fileID: 21300000, guid: 99459ab20698ea34da76df13d5f9346f, type: 3}
+  lives1_2: {fileID: 21300000, guid: 9d439fe7632a8cc4891ac5da97eaaafe, type: 3}
   mainSprite: {fileID: 436389548}
   mainSprite2: {fileID: 1349766031}
 --- !u!114 &966334497
@@ -1884,6 +1893,10 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 941133656}
+    - target: {fileID: 7913547, guid: 69bc640f0064bcc4c8fcff2cb22eee83, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 272964891}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69bc640f0064bcc4c8fcff2cb22eee83, type: 3}
 --- !u!1001 &8673181560034729860
@@ -1952,6 +1965,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673181561373676559, guid: 570813d40c283f94a9f01b9aaf4a77df,
+        type: 3}
+      propertyPath: speed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8673181561373676558, guid: 570813d40c283f94a9f01b9aaf4a77df,
         type: 3}

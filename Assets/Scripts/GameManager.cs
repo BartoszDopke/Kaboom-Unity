@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        player.GetComponent<PlayerMove>().enabled = false;
-        player2.GetComponent<Player2Move>().enabled = false;
         Time.timeScale = 0;
         gameOverUI.SetActive(true);
     }
@@ -26,9 +24,11 @@ public class GameManager : MonoBehaviour
         if (SpriteChanger.hp <= 0)
         {
             player.GetComponent<PlayerMove>().enabled = false;
+            player2.GetComponent<Player2Move>().enabled = false;
         }
         if (SpriteChanger2.hp2 <= 0)
         {
+            player.GetComponent<PlayerMove>().enabled = false;
             player2.GetComponent<Player2Move>().enabled = false;
         }
         if (SpriteChanger.hp <= 0)

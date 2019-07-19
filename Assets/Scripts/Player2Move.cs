@@ -7,26 +7,32 @@ public class Player2Move : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 mousePosition;
     private Vector3 oldPosition;
+    float diffPos;
+
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         if (Input.GetMouseButton(0))
-        {
-            
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);          
-            transform.position = new Vector3(transform.position.x, -5.0f, 0); 
+        {         
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition = new Vector3(mousePosition.x, -5.0f, 0);
-            transform.position = Vector3.Lerp(transform.position, mousePosition, speed / 15);
-            
-        }
-        
+            diffPos = mousePosition.x - transform.position.x;
+            if(Mathf.Abs(diffPos) > speed * Time.deltaTime)
+            {
+                transform.position += speed * Vector3.right * Mathf.Sign(diffPos) * Time.deltaTime;
+            }
+            else
+            {
+                Vector3 mousePos =  mousePosition;
+                mousePos.y = transform.position.y;
+                transform.position = mousePos;
+            }
+        }    
     }
 }

@@ -10,6 +10,10 @@ public class BonusPlayerCollision : MonoBehaviour
             {
                 SpriteChangerVSMode.hp++;
             }
+            if(SpriteChanger.hp < 3)
+            {
+                SpriteChanger.hp++;
+            }
             Destroy(gameObject);
         }
         if (coll.gameObject.name == "Player2")
@@ -17,6 +21,10 @@ public class BonusPlayerCollision : MonoBehaviour
             if (SpriteChanger2VSMode.hp2 < 3)
             {
                 SpriteChanger2VSMode.hp2++;
+            }
+            if (SpriteChanger2.hp2 < 3)
+            {
+                SpriteChanger2.hp2++;
             }
             Destroy(gameObject);
         }

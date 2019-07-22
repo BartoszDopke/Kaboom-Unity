@@ -11,7 +11,6 @@ public class BonusDeathPlayerVSCollision : MonoBehaviour
             Destroy(gameObject);
         }
 
-
         if (coll.gameObject.name == "Player2")
         {
             SpriteChanger2VSMode.hp2--;

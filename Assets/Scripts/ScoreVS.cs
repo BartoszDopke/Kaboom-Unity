@@ -11,7 +11,7 @@ public class ScoreVS : MonoBehaviour
     {
         //aktualizowanie i wyświetlanie obecnego wyniku
         scoreText.text = "Score (Player 1): \n" + points.ToString();
-        //instrukcje warunkowe do zmiany sprite'ów przy straceniu/zyskaniu życia oraz każdym kolejnym 1000 punktów
+        //instrukcje warunkowe do zmiany sprite'ów przy straceniu/zyskaniu życia oraz każdym kolejnym 200 punktów
         if (points!=0)
         {
             if (points % 200 == 0)

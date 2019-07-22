@@ -22,6 +22,7 @@ public class BomberMove : MonoBehaviour
     {
         return (new Vector3(Random.Range(min, max), transform.position.y,0));
     }
+    //generuje współrzędną dla niebieskich bomb
     float GenerateRandomChoice(float min, float max)
     {
         return Random.Range(min, max);
@@ -62,7 +63,7 @@ public class BomberMove : MonoBehaviour
     }
     public void SpawnDelayTwoPlayers()
     {
-        InvokeRepeating("Spawn", 0.5f, 0.4f);
+        InvokeRepeating("Spawn", 0.5f, 0.5f);
         InvokeRepeating("SpawnBonus", 2f, 8f);
     }
 
@@ -97,11 +98,6 @@ public class BomberMove : MonoBehaviour
 
     void Update()
     {
-        //if(maintainWidth)
-        //{
-        //    Camera.main.orthographicSize = defaultWidth / Camera.main.aspect;
-        //}
-
        if (Vector3.Distance(transform.position, NextPoint) > 0.5f && Time.timeScale != 0) //vector3.distance zwraca mi dystans między a i b
        {
             transform.position = Vector3.Lerp(transform.position, NextPoint, 0.02f * speed); //dzięki speed/int zmieniam prędkość zmian pozycji Bombera

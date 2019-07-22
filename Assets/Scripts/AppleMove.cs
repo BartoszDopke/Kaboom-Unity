@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
-
-
 //done
 public class AppleMove : MonoBehaviour
 {
-    private float speed = 6.5f;
+    private float speed = 9.5f;
 
     void Update()
     {

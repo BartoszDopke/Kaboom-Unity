@@ -28,16 +28,16 @@ public class SpriteChanger2 : MonoBehaviour
     //metody od GameManager
     private void OnEnable()
     {
-        GameManager.bombOutOfBounds += ChangePlayer2Sprite;
-        GameManager.bombOutOfBounds += BomberUpdateSprite;
+        GameManager.bombOutOfBounds2 += ChangePlayer2Sprite;
+        GameManager.bombOutOfBounds2 += BomberUpdateSprite;
         GameManager.collideWithBomb2 += PlayerCollisionUpdateSprite;
 
     }
 
     private void OnDisable()
     {
-        GameManager.bombOutOfBounds -= ChangePlayer2Sprite;
-        GameManager.bombOutOfBounds -= BomberUpdateSprite;
+        GameManager.bombOutOfBounds2 -= ChangePlayer2Sprite;
+        GameManager.bombOutOfBounds2 -= BomberUpdateSprite;
         GameManager.collideWithBomb2 -= PlayerCollisionUpdateSprite;
     }
 
@@ -48,7 +48,6 @@ public class SpriteChanger2 : MonoBehaviour
         UpdateSprite();
 
     }
-
 
     private void UpdateSprite()
     {
@@ -65,7 +64,6 @@ public class SpriteChanger2 : MonoBehaviour
                 break;
         }
     }
-
 
     //zmiana sprite'a Bombera na krótki czas
     private void BomberUpdateSprite()

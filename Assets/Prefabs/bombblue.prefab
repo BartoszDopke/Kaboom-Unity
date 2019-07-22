@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6496143862922345315}
   - component: {fileID: 6909451637254420652}
   - component: {fileID: 2257256970730211819}
-  - component: {fileID: 7496660977262087221}
   - component: {fileID: 1917652840518950590}
+  - component: {fileID: 7954143007050527412}
   m_Layer: 12
   m_Name: bombblue
   m_TagString: Untagged
@@ -144,18 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 11.07
---- !u!114 &7496660977262087221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044490503475653682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83707595cc532654b917d838131353a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1917652840518950590
 Rigidbody2D:
   serializedVersion: 4
@@ -177,3 +165,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7954143007050527412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044490503475653682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c937acc2ffe6f4ca3229ee2dda93df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

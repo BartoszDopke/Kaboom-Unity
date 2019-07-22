@@ -2,7 +2,6 @@
 
 public class Bounds : MonoBehaviour
 {
-
     //ustawienie ograniczeń ekranu dla Bombera i graczy
     void Update()
     {

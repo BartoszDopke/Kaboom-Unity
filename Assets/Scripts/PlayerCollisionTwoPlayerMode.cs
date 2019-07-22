@@ -8,7 +8,7 @@ public class PlayerCollisionTwoPlayerMode : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.name == "Player" || coll.gameObject.name == "Player2")
+        if (coll.gameObject.name == "Player")
         {
             Score.points += 10;
             if (!isCollide)
@@ -18,6 +18,17 @@ public class PlayerCollisionTwoPlayerMode : MonoBehaviour
                 isCollide = true;
             }
             Destroy(gameObject);
-        } 
+        }
+        if (coll.gameObject.name == "Player2")
+        {
+            Score.points += 10;
+            if (!isCollide)
+            {
+                if (GameManager.collideWithBomb2 != null)
+                    GameManager.collideWithBomb2.Invoke();
+                isCollide = true;
+            }
+            Destroy(gameObject);
+        }
     }
 }

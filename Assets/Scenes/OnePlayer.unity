@@ -838,7 +838,7 @@ RectTransform:
   m_GameObject: {fileID: 941133656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.88073, y: 1.0314841, z: 1}
+  m_LocalScale: {x: 2.4287746, y: 1.3320585, z: 1.2914}
   m_Children:
   - {fileID: 2036187655}
   - {fileID: 1985777705}
@@ -987,6 +987,9 @@ MonoBehaviour:
   lives3: {fileID: 21300000, guid: 1f350aa782c67014a9c3dbfcfef60b74, type: 3}
   lives2: {fileID: 21300000, guid: 8deb897043834b349b5d394dbd8c2a57, type: 3}
   lives1: {fileID: 21300000, guid: f42de7f1dcf165b48be639589b4943e6, type: 3}
+  lives3_2: {fileID: 0}
+  lives2_2: {fileID: 0}
+  lives1_2: {fileID: 0}
   mainSprite: {fileID: 436389548}
   mainSprite2: {fileID: 436389548}
 --- !u!114 &966334497
@@ -1786,12 +1789,12 @@ PrefabInstance:
     - target: {fileID: 5303161631460804584, guid: 7c707c7eb5330b7419c251e677fa2bfd,
         type: 3}
       propertyPath: start_speed
-      value: 5.06
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5303161631460804584, guid: 7c707c7eb5330b7419c251e677fa2bfd,
         type: 3}
       propertyPath: speed
-      value: 5.08
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c707c7eb5330b7419c251e677fa2bfd, type: 3}

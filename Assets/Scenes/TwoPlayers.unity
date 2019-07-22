@@ -711,7 +711,7 @@ RectTransform:
   m_GameObject: {fileID: 941133656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2264988, y: 1.1199578, z: 1.1098888}
+  m_LocalScale: {x: 2.6819186, y: 1.34904, z: 1.3369114}
   m_Children:
   - {fileID: 2036187655}
   - {fileID: 1985777705}
@@ -1194,8 +1194,8 @@ MonoBehaviour:
   start_speed: 5.13
   rb: {fileID: 1468773906}
   apple: {fileID: 1248066612129291970, guid: 23d78ee6568840f4caeb11458317bf46, type: 3}
-  bonus: {fileID: 9044490503475653682, guid: 05ce3941e7a72364c87ebe78abafa4b4, type: 3}
-  bonusdeath: {fileID: 246049767451732745, guid: 828c55d499c964944a97bde38c370edf,
+  bonus: {fileID: 3161140120100661809, guid: 57908217c9d80d34c9c3100b1ad626a9, type: 3}
+  bonusdeath: {fileID: 3403419162567810312, guid: 69f065e341151414db303604d899f5fe,
     type: 3}
   bomber: {fileID: 1468773905}
   nMin: -6.5
@@ -1969,7 +1969,12 @@ PrefabInstance:
     - target: {fileID: 8673181561373676559, guid: 570813d40c283f94a9f01b9aaf4a77df,
         type: 3}
       propertyPath: speed
-      value: 30
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673181561373676559, guid: 570813d40c283f94a9f01b9aaf4a77df,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8673181561373676558, guid: 570813d40c283f94a9f01b9aaf4a77df,
         type: 3}

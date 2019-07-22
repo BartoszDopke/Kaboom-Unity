@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static System.Action bombOutOfBounds;
+    public static System.Action bombOutOfBounds2;
     public static System.Action collideWithBomb;
     public static System.Action collideWithBomb2;
     public bool isEnd = false;
     public GameObject player, player2;
-   
 
     [SerializeField]
     private GameObject gameOverUI;
